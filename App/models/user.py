@@ -6,6 +6,7 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username =  db.Column(db.String, nullable=False, unique=True)
     password = db.Column(db.String(120), nullable=False)
+    email = db.Column(db.String(120), nullable=False)
 
     def __init__(self, username, password):
         self.username = username
@@ -25,3 +26,20 @@ class User(db.Model, UserMixin):
         """Check hashed password."""
         return check_password_hash(self.password, password)
 
+    def editUsername(self, username,password):
+        None
+    
+    def editPassword(self, username,password):
+        None
+    def editEmail(self, username,password):
+        None
+
+    def login(self, username,password):
+        None
+    def signUp(self, username,password):
+        None
+
+    def addExercise(self, username,password):
+        None
+    def completeExercise(self, username,password):
+        None
